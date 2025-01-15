@@ -1,0 +1,187 @@
+/* Base container styles */
+.agents-container {
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+
+  border-radius: 16px;
+}
+
+/* Main title styles */
+.agents-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color:  #1c1c1c; /* Light text color for contrast */
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Subtitle for the agents section */
+.agents-sub-title {
+  font-size: 1.25rem;
+  color:  #1c1c1c; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Grid container for the agents cards */
+.agents-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+/* Individual agent card style */
+.agent-card {
+  background-color: #2d2d2d; /* Dark card background */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 450px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+/* Hover effect for agent card */
+.agent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+}
+
+/* Image container inside the agent card */
+.agent-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+/* Image styling with smooth hover transition */
+.agent-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for images */
+.agent-card:hover .agent-image {
+  transform: scale(1.1);
+}
+
+/* Social icons container */
+.social-icons {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+/* Social icon style */
+.social-icon {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+  color: #F25F5C; /* Accent color on hover */
+}
+
+/* Show social icons on hover */
+.agent-card:hover .social-icons {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Agent information container */
+.agent-info {
+  padding: 20px;
+  background: linear-gradient(135deg, #2d2d2d, #1c1c1c); /* Dark gradient background */
+  color: white;
+  border-radius: 0 0 16px 16px;
+  position: relative;
+}
+
+/* Name of the agent */
+.agent-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Agent's title */
+.agent-title {
+  font-size: 1.2rem;
+  color: #f1f1f1; /* Lighter text for title */
+  margin-bottom: 20px;
+}
+
+/* Contact information container */
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* Contact icon style */
+.contact-icon {
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for contact icons */
+.contact-icon:hover {
+  color: #F25F5C; /* Accent color on hover */
+}
+
+/* Responsive design for medium and small screens */
+@media (max-width: 1024px) {
+  .agents-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .agents-grid {
+    grid-template-columns: 1fr; /* Stack the cards in 1 column for small screens */
+  }
+
+  .agent-card {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    bottom: 5px; /* Slightly reduce space on smaller screens */
+  }
+}
+
+/* Animation for scroll effects */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}

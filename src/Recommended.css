@@ -1,0 +1,200 @@
+/* General container for the recommended section */
+.recommended {
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+ 
+}
+
+/* Buttons for property filters */
+.recommended-property-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.recommended-property-button {
+  border-radius: 68px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.recommended-property-button:hover {
+  background-color: teal;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.recommended-property-button.active {
+  background-color: teal;
+  color: white;
+}
+
+
+
+/* Titles and subtitles */
+.recommended-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.recommended-sub-title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+/* Grid for property cards */
+.recommended-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual property card */
+.recommended-property-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33.33% - 20px);
+}
+
+.recommended-property-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Property card image */
+.recommended-property-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Property card information */
+.recommended-property-info {
+  padding: 15px;
+}
+
+.recommended-property-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.recommended-property-meta {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.recommended-property-location {
+  font-size: 0.9rem;
+  color: #95a5a6;
+  margin-bottom: 15px;
+}
+
+.recommended-property-divider {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 15px 0;
+}
+
+/* Agent details section */
+.recommended-agent-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid #eee;
+}
+
+.recommended-agent-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #eee;
+  margin-right: 10px;
+}
+
+.recommended-agent-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-agent-name {
+  font-size: 0.9rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.recommended-property-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .recommended-property-card {
+    width: calc(50% - 20px);
+  }
+
+  .recommended-property-button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .recommended-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommended-property-card {
+    width: 100%;
+  }
+
+  .recommended-property-button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .recommended-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation for elements on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
