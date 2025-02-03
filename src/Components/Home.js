@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import '../Home.css';
 // import Properties from './Properties';
 import Popular from "./Popular";
@@ -7,7 +7,7 @@ import CountSection from "./CountSection";
 import Agents from "./Agents";
 import Recommended from "./Recommended";
 import Neighbourhoods from "./Neighbourhoods";
-import Schedule from "./Schedule";  // Import Schedule component
+
 import Footer from "./Footer";
 
 const Home = () => {
@@ -27,9 +27,6 @@ const Home = () => {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Create a ref for the Schedule component to scroll to it
-  const scheduleRef = useRef(null);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -70,11 +67,8 @@ const Home = () => {
       <CountSection />
       <Services />
 
-      {/* Schedule Component with the ref to enable scrolling to it */}
-      <div ref={scheduleRef}>
-        <Schedule />
-      </div>
-
+     
+     
       <Agents />
       <Footer />
     </>

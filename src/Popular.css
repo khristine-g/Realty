@@ -159,18 +159,22 @@
     color: black;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .top-property-card {
-      width: calc(50% - 10px); /* 2 cards per row */
-    }
+ /* Responsive Design */
+@media (max-width: 768px) {
+  .top-property-card {
+    width: calc(50% - 10px); /* 2 cards per row for tablets */
   }
-  
-  @media (max-width: 480px) {
-    .top-property-card {
-      width: 100%; /* 1 card per row */
-    }
+}
+
+@media (max-width: 480px) {
+  .top-properties-grid {
+    gap: 10px; /* Reduce the gap for smaller screens */
   }
+  .top-property-card {
+    width: calc(50% - 10px); /* 2 cards per row for phones */
+  }
+}
+
   
   .animate-on-scroll {
     opacity: 0;

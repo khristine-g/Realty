@@ -44,7 +44,7 @@ const Popular = () => {
                 className="top-property-image"
               />
               <div className="top-property-info">
-                <h3 className="property-title">{property.title}</h3>
+                <h3 className="top-property-title">{property.title}</h3>
                 <p className="top-property-meta">
                   <i className="fas fa-bed"></i> {property.bedrooms} Beds
                   <span> | </span>

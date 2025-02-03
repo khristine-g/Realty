@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import NeighbourhoodImage1 from '../images/neighbourhood1.jpg';
 import NeighbourhoodImage2 from '../images/neighbourhood2.jpg';
 import NeighbourhoodImage3 from '../images/neighbourhood3.jpeg';
@@ -17,21 +17,23 @@ const neighbourhoods = [
 ];
 
 const Neighbourhoods = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
-    <Box m={5}>
+    <Box m={isSmallScreen ? 2 : 5}>
       <Box mb={4} textAlign="center">
-        <Typography variant="h2" gutterBottom>
+        <Typography variant={isSmallScreen ? "h4" : "h2"} gutterBottom>
           Our Neighbourhoods
         </Typography>
         <Typography variant="body1">
-          See Our Neighbourhoods
+          Explore our beautiful communities
         </Typography>
       </Box>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(3, 1fr)"
-        gap={4}
-        mx={5}
+        gridTemplateColumns={isSmallScreen ? "repeat(1, 1fr)" : "repeat(3, 1fr)"}
+        gap={isSmallScreen ? 2 : 4}
       >
         {neighbourhoods.map((neighbourhood) => (
           <Box
@@ -40,22 +42,28 @@ const Neighbourhoods = () => {
             borderRadius={2}
             overflow="hidden"
             className="neighbourhood-card"
+            sx={{
+              height: isSmallScreen ? 300 : 400,
+            }}
           >
             <Box
-              height="300px"
               style={{
                 backgroundImage: `url(${neighbourhood.image})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
               className="neighbourhood-image"
+              sx={{
+                height: "100%",
+                position: "relative",
+              }}
             >
               <Box
                 position="absolute"
                 bottom={16}
                 left={16}
                 right={16}
-                bgcolor="rgba(0, 0, 0, 0.5)"
+                bgcolor="rgba(0, 0, 0, 0.6)"
                 borderRadius={1}
                 p={2}
                 className="neighbourhood-caption"

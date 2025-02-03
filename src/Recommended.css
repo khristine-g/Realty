@@ -159,7 +159,7 @@
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .recommended-property-card {
-    width: calc(50% - 20px);
+    width: calc(50% - 20px); /* Two per row for tablets */
   }
 
   .recommended-property-button {
@@ -174,7 +174,7 @@
 
 @media (max-width: 480px) {
   .recommended-property-card {
-    width: 100%;
+    width: calc(50% - 10px); /* Two per row for phones */
   }
 
   .recommended-property-button {
@@ -185,7 +185,12 @@
   .recommended-title {
     font-size: 1.5rem;
   }
+
+  .recommended-grid {
+    gap: 10px; /* Reduce spacing between cards on small screens */
+  }
 }
+
 
 /* Animation for elements on scroll */
 .animate-on-scroll {
