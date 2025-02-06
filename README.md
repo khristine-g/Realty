@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+🏡 URBAN REALTY – Your Gateway to Finding the Perfect Home
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ABOUT THE PROJECT
 
-## Available Scripts
+URBAN REALTY is a modern real estate platform designed to help users easily search, browse, and list properties. Whether you're looking to buy, rent, or sell a property, this platform provides an intuitive and seamless experience with advanced filtering, interactive property details, and agent connections.
 
-In the project directory, you can run:
+This project combines a powerful Rails backend with a dynamic React frontend, ensuring a fast and responsive user experience.
 
-### `npm start`
+WHY URBAN REALTY?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🏠 Discover & Browse Listings – Easily explore available properties with images and key details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🔍 Advanced Search & Filtering – Find properties by location, price, category, and agent.
 
-### `npm test`
+📸 Detailed Property Pages – View high-quality images, descriptions, and agent information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📞 Connect with Agents – Contact property agents directly for inquiries.
 
-### `npm run build`
+📱 Fully Responsive – Works smoothly on all devices (mobile, tablet, desktop).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CORE FEATURES
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🏘️ Property Listings & Details
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Explore a variety of real estate listings with images, descriptions, prices, and locations.
 
-### `npm run eject`
+Click on a property card to navigate to a dedicated page with additional property details.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔍  Filter
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Filter by  category.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🏢 Agent Profiles
 
-## Learn More
+Each agent has a profile with their name, image, email, phone number, and listings.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📸 Image Gallery
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each property page includes a high-quality image gallery for a better visual experience.
 
-### Code Splitting
+📱 Mobile-Friendly Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Optimized for mobile, tablet, and desktop with a sleek, user-friendly interface.
 
-### Analyzing the Bundle Size
+TECH STACK 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React
