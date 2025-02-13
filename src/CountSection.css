@@ -1,28 +1,41 @@
 /* Count Section Styles */
 .count-section {
-  background-color: #121212;
-  padding: 60px 20px;
+  background-color: #f9f9f9; /* Light background */
+  padding: 80px 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 50px;
 }
 
+.count-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.count-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
 .count-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Counter Item Styles */
+/* Counter Card Styles */
 .counter-item {
-  background-color: #1a1a1a; 
-  padding: 50px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,90 +43,85 @@
 }
 
 .counter-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
 }
 
 .counter-icon {
-  font-size: 40px;
-  color: white;
+  font-size: 45px;
+  color: #ff7a59; /* Vibrant accent color */
   margin-bottom: 15px;
 }
 
 .counter-number {
-  font-size: 36px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
 }
 
 .counter-label {
   font-size: 16px;
-  color: white;
+  color: #777;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 500;
 }
 
-.animate-on-scroll {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-
-.animate-on-scroll.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
   .count-section {
-    padding: 40px 10px;
+    padding: 50px 15px;
+  }
+
+  .count-title {
+    font-size: 28px;
+  }
+
+  .count-description {
+    font-size: 16px;
   }
 
   .count-grid {
-    grid-template-columns: 1fr 1fr; /* Display two columns for smaller screens */
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
   .counter-item {
-    padding: 30px; /* Reduce padding for smaller screens */
-    height: 200px; /* Adjust the height of counter items */
+    padding: 30px;
   }
 
   .counter-icon {
-    font-size: 30px; /* Smaller icon size */
+    font-size: 35px;
   }
 
   .counter-number {
-    font-size: 28px; /* Adjust font size for smaller screens */
+    font-size: 28px;
   }
 
   .counter-label {
-    font-size: 14px; /* Smaller label font size */
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
   .count-grid {
-    grid-template-columns: 1fr; /* Stack all items in a single column on very small screens */
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
 
   .counter-item {
-    padding: 20px; /* Further reduce padding on very small screens */
-    height: 180px; /* Adjust height further for mobile screens */
+    padding: 25px;
   }
 
   .counter-icon {
-    font-size: 25px; /* Further reduce icon size */
+    font-size: 30px;
   }
 
   .counter-number {
-    font-size: 24px; /* Further adjust font size */
+    font-size: 24px;
   }
 
   .counter-label {
-    font-size: 12px; /* Further adjust label font size */
+    font-size: 12px;
   }
 }

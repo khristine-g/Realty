@@ -1,31 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import { FaBuilding, FaHome, FaSmile, FaUsers } from 'react-icons/fa';
-import '../CountSection.css';
+import React, { useEffect, useState } from "react";
+import { FaBuilding, FaHome, FaSmile, FaUsers } from "react-icons/fa";
+import "../CountSection.css";
 
 const CountSection = () => {
   const counters = [
-    { id: 1, count: 850, label: 'Elegant Apartments', icon: <FaBuilding /> },
-    { id: 2, count: 950, label: 'Luxury Houses', icon: <FaHome /> },
-    { id: 3, count: 18000, label: 'Satisfied Guests', icon: <FaSmile /> },
-    { id: 4, count: 2000, label: 'Happy Owners', icon: <FaUsers /> },
+    { id: 1, count: 850, label: "Elegant Apartments", icon: <FaBuilding /> },
+    { id: 2, count: 950, label: "Luxury Houses", icon: <FaHome /> },
+    { id: 3, count: 18000, label: "Satisfied Guests", icon: <FaSmile /> },
+    { id: 4, count: 2000, label: "Happy Owners", icon: <FaUsers /> },
   ];
 
   return (
-    <div className="animate-on-scroll">
-   
-    
     <section className="count-section">
       <div className="count-container">
+        <h2 className="count-title">Our Achievements</h2>
+        <p className="count-description">
+          We take pride in our real estate success and the happiness of our
+          clients.
+        </p>
         <div className="count-grid">
           {counters.map((counter) => (
-            <Counter key={counter.id} count={counter.count} label={counter.label} icon={counter.icon} />
+            <Counter
+              key={counter.id}
+              count={counter.count}
+              label={counter.label}
+              icon={counter.icon}
+            />
           ))}
         </div>
-      
       </div>
     </section>
-    </div>
-    
   );
 };
 
@@ -34,7 +38,7 @@ const Counter = ({ count, label, icon }) => {
 
   useEffect(() => {
     let start = 0;
-    const duration = 4000; // 2 seconds
+    const duration = 2000; // Faster, smoother animation
     const increment = count / duration * 10;
 
     const counterInterval = setInterval(() => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import '../Neighbourhoods.css';
 import NeighbourhoodImage1 from '../images/neighbourhood1.jpg';
 import NeighbourhoodImage2 from '../images/neighbourhood2.jpg';
 import NeighbourhoodImage3 from '../images/neighbourhood3.jpeg';
@@ -17,69 +17,27 @@ const neighbourhoods = [
 ];
 
 const Neighbourhoods = () => {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
   return (
-    <Box m={isSmallScreen ? 2 : 5}>
-      <Box mb={4} textAlign="center">
-        <Typography variant={isSmallScreen ? "h4" : "h2"} gutterBottom>
-          Our Neighbourhoods
-        </Typography>
-        <Typography variant="body1">
-          Explore our beautiful communities
-        </Typography>
-      </Box>
-      <Box
-        display="grid"
-        gridTemplateColumns={isSmallScreen ? "repeat(1, 1fr)" : "repeat(3, 1fr)"}
-        gap={isSmallScreen ? 2 : 4}
-      >
+    <div className="neighbourhoods-container">
+      <div className="section-header">
+        <h2>Our Neighbourhoods</h2>
+        <p>Explore our beautiful communities</p>
+      </div>
+      <div className="neighbourhoods-grid">
         {neighbourhoods.map((neighbourhood) => (
-          <Box
-            key={neighbourhood.id}
-            position="relative"
-            borderRadius={2}
-            overflow="hidden"
-            className="neighbourhood-card"
-            sx={{
-              height: isSmallScreen ? 300 : 400,
-            }}
-          >
-            <Box
-              style={{
-                backgroundImage: `url(${neighbourhood.image})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
+          <div key={neighbourhood.id} className="neighbourhood-card">
+            <div
               className="neighbourhood-image"
-              sx={{
-                height: "100%",
-                position: "relative",
-              }}
-            >
-              <Box
-                position="absolute"
-                bottom={16}
-                left={16}
-                right={16}
-                bgcolor="rgba(0, 0, 0, 0.6)"
-                borderRadius={1}
-                p={2}
-                className="neighbourhood-caption"
-              >
-                <Typography variant="h6" color="white">
-                  {neighbourhood.name}
-                </Typography>
-                <Typography variant="body2" color="white">
-                  {neighbourhood.description}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+              style={{ backgroundImage: `url(${neighbourhood.image})` }}
+            ></div>
+            <div className="neighbourhood-overlay">
+              <h3>{neighbourhood.name}</h3>
+              <p>{neighbourhood.description}</p>
+            </div>
+          </div>
         ))}
-      </Box>
-    </Box>
+      </div>
+    </div>
   );
 };
 

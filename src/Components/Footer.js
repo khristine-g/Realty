@@ -1,82 +1,56 @@
 import React from "react";
-import { FaCity, FaPhoneAlt, FaEnvelope, FaLocationArrow } from "react-icons/fa"; // Import location icon as well
-import "../Footer.css"; // Import the CSS file
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import "../Footer.css";
 
 const Footer = () => {
   return (
-    <div id="footer">
     <footer className="footer">
-      <div className="container">
-        {/* Logo and Site Name */}
-        <div className="logo-section">
-          <FaCity size={40} className="logo-icon" />
-          <span className="site-name">Urban Realty</span>
-          <div className="logo-paragraph">
-          <p>Rapidiously myocardinate cross-platform intellectual capital model. Appropriately create interactive infrastructures.</p>
-        </div>
-          
-        </div>
-
-        {/* Additional Paragraph below the Logo */}
+      <div className="footer-container">
         
-
-        {/* Contact Information */}
-        <div className="footer-contact-section">
-          <h3>Get In Touch</h3>
-          <div className="footer-contact-info">
-            <div className="footer-contact-item">
-              <FaPhoneAlt className="footer-icon" />
-              <p>+01 234 567 890</p>
-            </div>
-            <div className="footer-contact-item">
-              <FaPhoneAlt className="footer-icon" />
-              <p>+09 876 543 210</p>
-            </div>
-            <div className="footer-contact-item">
-              <FaEnvelope className="footer-icon" />
-              <p>mailinfo00@realar.com</p>
-            </div>
-            <div className="footer-contact-item">
-              <FaEnvelope className="footer-icon" />
-              <p>support24@realar.com</p>
-            </div>
-          </div>
-          <div className="address">
-            <FaLocationArrow className="footer-icon" />
-           
-            <p>Nairobi, Kenya</p>
-          </div>
+        {/* About Section */}
+        <div className="footer-section">
+          <h2>About Us</h2>
+          <p>
+            We provide the best real estate deals in town. Find your dream home with us.
+          </p>
         </div>
 
-        {/* Useful Links */}
-        <div className="links-section">
-          <h3>Useful Link</h3>
-          <ul className="link-list">
-            <li><a href="/pricing">Pricing Page</a></li>
-            <li><a href="/privacy">Privacy & Policy</a></li>
-            <li><a href="/what-we-do">What we do</a></li>
-            <li><a href="/upcoming">Upcoming</a></li>
-            <li><a href="/apply">Apply</a></li>
+        {/* Quick Links */}
+        <div className="footer-section">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Listings</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
 
-        {/* Explore Links */}
-        <div className="explore-section">
-          <h3>Explore</h3>
-          <ul className="link-list">
-            <li><a href="/properties">All Properties</a></li>
-            <li><a href="/authors">All Authors</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/pricing">Our Pricing</a></li>
-            <li><a href="/products">Our Products</a></li>
-          </ul>
+        {/* Contact Section */}
+        <div className="footer-section">
+          <h2>Contact Us</h2>
+          <p>1234 Westlands, Nairobi, Kenya</p>
+          <p>Email: info@realestate.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+
+        {/* Social Media */}
+        <div className="footer-section">
+          <h2>Follow Us</h2>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/"><FaFacebook /></a>
+            <a href="https://www.x.com/"><FaTwitter /></a>
+            <a href="https://www.instagram.com/"><FaInstagram /></a>
+            <a href="https://www.linkedin.com/"><FaLinkedin /></a>
+          </div>
         </div>
       </div>
+
+      <div className="footer-bottom">
+        &copy; {new Date().getFullYear()} Real Estate Co. All Rights Reserved.
+      </div>
     </footer>
-    </div>
   );
 };
 
 export default Footer;
-
-

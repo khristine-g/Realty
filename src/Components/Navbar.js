@@ -1,33 +1,35 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaCity, FaBars, FaTimes } from "react-icons/fa";
 import "../Navbar.css";
-import { FaCity } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from "react-icons/fa";
-import { useLocation } from 'react-router-dom'; 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 80);
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false);
 
-  const isPropertyDetailPage = location.pathname.includes('/property/');
+  const isPropertyDetailPage = location.pathname.includes("/property/");
 
   return (
-    <nav className={`real-navbar ${scrolled ? "navbar-scrolled" : ""} ${isPropertyDetailPage ? "navbar-property-detail" : ""}`}>
+    <nav
+      className={`real-navbar ${scrolled ? "navbar-scrolled" : ""} ${
+        isPropertyDetailPage ? "navbar-property-detail" : ""
+      }`}
+    >
       <div className="navbar-brand">
         <FaCity className="logo-icon" />
         <h2 className="company-name">Urban Realty</h2>
@@ -38,23 +40,16 @@ const Navbar = () => {
       </div>
 
       <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
-        <Link to='/'>   
-       
+        <Link to="/" onClick={closeMenu}>
           <li>Home</li>
-          </Link>
-        
-        <a href="#services" >
+        </Link>
+        <a href="#services" onClick={closeMenu}>
           <li>Services</li>
         </a>
-        <Link to='/schedule'> 
-        <li>Contact</li>
-        
-        
+        <Link to="/schedule" onClick={closeMenu}>
+          <li>Contact</li>
         </Link>
-        
-         
-       
-        <a href="#agents" >
+        <a href="#agents" onClick={closeMenu}>
           <li>Agents</li>
         </a>
       </ul>

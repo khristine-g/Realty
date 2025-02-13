@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import '../Home.css';
 // import Properties from './Properties';
 import Popular from "./Popular";
+import News from "./News";
 import Services from "./Services";
 import CountSection from "./CountSection";
 import Agents from "./Agents";
@@ -70,6 +71,7 @@ const Home = () => {
      
      
       <Agents />
+      <News />
       <Footer />
     </>
   );

@@ -15,8 +15,8 @@ const Popular = () => {
   return (
     <div className="animate-on-scroll">
       <div className="top-property">
-        <h4 className="top-property-sub-title">Top Properties</h4>
-        <h2 className="top-property-title">Best Property Value</h2>
+        <h2 className="top-property-header">Top Properties</h2>
+      
         <div className="top-property-buttons">
           {categories.map((category) => (
             <button
@@ -46,9 +46,9 @@ const Popular = () => {
               <div className="top-property-info">
                 <h3 className="top-property-title">{property.title}</h3>
                 <p className="top-property-meta">
-                  <i className="fas fa-bed"></i> {property.bedrooms} Beds
+                  <i className="fas fa-bed "></i> {property.bedrooms} Beds
                   <span> | </span>
-                  <i className="fas fa-bath"></i> {property.bathrooms} Baths
+                  <i className="fas fa-bath "></i> {property.bathrooms} Baths
                   <span> | </span>
                   <i className="fas fa-expand"></i> {property.size} Sqft
                 </p>

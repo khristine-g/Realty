@@ -10,7 +10,7 @@
   
   .top-property-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     margin-bottom: 30px;
    
@@ -37,14 +37,16 @@
   
   .top-property-button.active {
     /* background-color: #3498db; */
-    background-color: black;
+    background-color: #008cba;;
     color: white;
   }
 
 
   
   /* Top Properties */
-  .top-property-title {
+  .top-property-header{
+    display: flex;
+    justify-content: left;
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 10px;
@@ -67,6 +69,15 @@
 
 
 
+  }
+  .top-property-title{
+    display: flex;
+    justify-content: left;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   .top-properties-grid {
@@ -108,12 +119,14 @@
     font-size: 0.9rem;
     color: #7f8c8d;
     margin-bottom: 10px;
+   text-align: left;
   }
   
   .top-property-location {
     font-size: 0.9rem;
     color: #95a5a6;
     margin-bottom: 15px;
+    text-align: left;
   }
   
   /* Divider */

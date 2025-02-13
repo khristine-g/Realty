@@ -23,52 +23,46 @@ const agents = [
     title: 'Property Consultant',
     contact: 'emilyclark@example.com',
   },
-  
 ];
 
 const Agents = () => {
   return (
-    <div id="agents">
-    <div className="animate-on-scroll">
-    <div className="agents-container">
-      <h2 className="agents-sub-title">Team Members</h2>
+    <section className="agents-section">
+      <div className="agents-header">
+        <h2>Meet Our Expert Agents</h2>
+        <p>Helping you find your dream home with trust and experience.</p>
+      </div>
 
-      <h2 className="agents-title">Meet Our Agents</h2>
       <div className="agents-grid">
         {agents.map((agent, index) => (
           <div key={index} className="agent-card">
-            <div className="agent-image-container">
+            <div className="agent-image-wrapper">
               <img src={agent.image} alt={agent.name} className="agent-image" />
-              <div className="social-icons">
-                <a href={`https://facebook.com/${agent.name}`} target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-facebook"></i>
+              <div className="overlay">
+                <a href={`https://facebook.com/${agent.name}`} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href={`https://twitter.com/${agent.name}`} target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href={`https://twitter.com/${agent.name}`} target="_blank" rel="noopener noreferrer">
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a href={`https://linkedin.com/in/${agent.name}`} target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <i className="fab fa-linkedin"></i>
+                <a href={`https://linkedin.com/in/${agent.name}`} target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>
             </div>
+
             <div className="agent-info">
-              <h3 className="agent-name">{agent.name}</h3>
+              <h3>{agent.name}</h3>
               <p className="agent-title">{agent.title}</p>
-              <div className="contact-info">
-                <a href={`mailto:${agent.contact}`} className="contact-icon">
-                  <i className="fas fa-envelope"></i>
-                </a>
-                <a href={`tel:${agent.contact}`} className="contact-icon">
-                  <i className="fas fa-phone"></i>
-                </a>
+              <div className="contact-icons">
+                <a href={`mailto:${agent.contact}`}><i className="fas fa-envelope"></i></a>
+                <a href={`tel:${agent.contact}`}><i className="fas fa-phone"></i></a>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
-    </div>
-    </div>
+    </section>
   );
 };
 
